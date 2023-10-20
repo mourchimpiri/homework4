@@ -17,7 +17,7 @@ def gameoflife(k):  # Runs Conway's game of life with the Glider formation
         print("k must be a positive integer")
         return
 
-    # Creates the Glider formation
+    # Creates the Glider formation using a boolean matrix
     initialMatrix = np.zeros(shape=(20, 20), dtype=bool)
     initialMatrix[8, 9] = True
     initialMatrix[9, 10] = True
@@ -25,10 +25,10 @@ def gameoflife(k):  # Runs Conway's game of life with the Glider formation
     initialMatrix[10, 9] = True
     initialMatrix[10, 10] = True
     fig, ax = plt.subplots()
-    im = ax.imshow(initialMatrix, cmap='viridis')
+    im = ax.imshow(initialMatrix, cmap='binary')
 
     # Defines the update function for the animation
-    def update():
+    def update(num):
         nonlocal initialMatrix  # Allows initial matrix to be updated within the function
         newMatrix = evolve.evolve(initialMatrix.copy())
         im.set_data(newMatrix)
@@ -71,6 +71,4 @@ def gameoflife(k):  # Runs Conway's game of life with the Glider formation
             except ValueError:
                 print("Error: k must be an integer.")
 
-
-# Test data
 gameoflife(100)
