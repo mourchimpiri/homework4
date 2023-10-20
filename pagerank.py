@@ -30,6 +30,7 @@ def pagerank(A):  # Implements the PageRank algorithm to a given matrix. Assumes
     norm_comp_eig_vector = comp_eig_vector / comp_eig_vector.sum()
     print(norm_comp_eig_vector)
 
+
 # Test data
 A = np.array(
     [
