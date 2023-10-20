@@ -25,7 +25,7 @@ def gameoflife(k):  # Runs Conway's game of life with the Glider formation
     initialMatrix[10, 9] = True
     initialMatrix[10, 10] = True
     fig, ax = plt.subplots()
-    im = ax.imshow(initialMatrix, cmap='binary')  # Creates a matrix where False = white and True = black
+    im = ax.imshow(initialMatrix, cmap='binary')  # Creates a matrix where True = black and False = white
 
     # Defines the update function for the animation
     def update(num):
