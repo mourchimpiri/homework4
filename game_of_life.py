@@ -29,7 +29,7 @@ def gameoflife(k):  # Runs Conway's game of life with the Glider formation
 
     # Defines the update function for the animation
     def update():
-        nonlocal initialMatrix
+        nonlocal initialMatrix  # Allows initial matrix to be updated within the function
         newMatrix = evolve.evolve(initialMatrix.copy())
         im.set_data(newMatrix)
         initialMatrix = newMatrix
