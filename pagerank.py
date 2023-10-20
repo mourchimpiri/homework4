@@ -8,7 +8,6 @@ def pagerank(A):  # Implements the PageRank algorithm to a given matrix. Assumes
                         "Outputs- r: 1x6 updated rank matrix of all webpages \n"
                         " \t diff: Float of the maximum difference between elements in 2 iterations of r \n"
                         " \t Normalized principal eigenvector of normalized matrix M")
-    help(pagerank)
 
     # Normalizes the matrix along the columns
     M = A / A.sum(axis=0, keepdims=1)
